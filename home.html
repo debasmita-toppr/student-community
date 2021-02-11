@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student profile website</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body id="homepage-container">
+    <div>
+        <ul class="topnav">
+            <li><div id="dispimages" class="dispimages"><img src="images/person2.png"></div></li>
+            <li><a href="home.html"><h1>Social Website</h1><p id="welcome"></p></a></li>
+            <li class="right"><button onclick="logout();">Logout</button></li>
+            <li class="right" id="profile-text"><a href="profile.html">My Profile</a></li>
+            <li class="right" id="profile-text"><a href="post.html">Post</a></li>
+            <li class="right active" id="profile-text"><a href="home.html">Home</a></li>
+        </ul> 
+    </div>
+    <div class="sidebar">
+        <a class="active" href="home.html">Home</a>
+        <a href="profile.html">Profile</a>
+        <a href="post.html">Post</a>
+        <a onclick="logout();">Logout</a>
+    </div>
+    <!-- add post module -->
+    <section id="add-post-module" >
+        <h3 id="compose">Compose Post<span><a href="post.html"><button id="open-add-post-form-btn">+</button></a></span></h3>
+    </section>
+
+    <!-- show posts module -->
+    <div class="row">
+        <div class="col-11">
+    <ul id="post-list" style="max-width: 800px;"></ul>
+</div>
+    <!-- edit posts module -->
+    <div class="col-1">
+        <section id="edit-post-module" class="card border-secondary mb-4">
+        <form>
+            <h3 class="card-title">Edit Post</h3>
+            <input type="hidden" class="edit-postid">
+            <br>
+            <input type='text' data-key='post_title' class='edit-post-input' placeholder="Post Title"><br>
+            <br>
+            <textarea type='text' data-key='post_content' class='edit-post-input' placeholder="Post Content"></textarea> <br>
+            <button type='button' class="btn btn-info" id="edit-post-btn">Update</button>
+        </form>
+    </section>
+    <section id="like-post-module">
+        <form>
+            <input type="hidden" class="like-postid">
+        </form>
+    </section>
+    <section id="comment-post-module" class="card border-secondary mb-4">
+        <form>
+            <h3 class="card-title">Add Answer</h3>
+            <input type="hidden" class="comment-postid">
+            <br>
+            <textarea type='text' data-key='post_answers' class='comment-post-input' placeholder="Add Answer"></textarea> <br>
+            <button type='button' class="btn btn-info" id="comment-post-btn">Update</button>
+        </form>
+    </section>
+</div>
+</div>
+
+    <p id="data"></p>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-storage.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="EditDeletePost.js"></script>
+    <script type="text/javascript" src="profilePage.js"></script>
+    <script type="text/javascript" src="likes.js"></script>
+    <script type="text/javascript" src="comments.js"></script>
+    <script type="text/javascript" src="createPost.js"></script>
+  </body>
+
+</html>

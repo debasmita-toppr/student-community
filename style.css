@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    background:#E9EAED;
+}
+/*Login and SignUp Page*/
+.container-login{
+  background: rgba(19, 35, 47, 0.9);
+  max-width: 500px;
+  margin: 40px auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+.tab{
+  padding: 15px;
+  background:  #33C3F0;
+  color: white;
+  font-size: 20px;
+  width: 50%;
+  text-align: center;
+  margin: 20px auto;
+}
+.tab:hover{
+    background: #1EAEDB;
+}
+.main-div input {
+  display: block;
+  border: 1px solid #33C3F0;
+  border-radius: 5px;
+  background: none;
+  padding: 15px;
+  outline: none;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  font-size: 20px;
+  color: white;
+}
+.main-div input:focus {
+  border: 1px solid white;
+}
+.main-div button{
+  padding: 15px;
+  transition: 0.3s;
+  margin: 20px auto;
+  width: 100%;
+}
+.main-div button:hover{
+  background: #fff;
+  color: #5d8ffc;
+  border: 1px solid #5d8ffc;
+}
+.main-div{
+  padding: 20px;
+}
+#login_div a{
+  color: white;
+  text-decoration: none;
+}
+#login_div img{
+  margin: 20px 200px;
+}
+h4{
+  text-decoration: underline;
+}
+@media(max-width: 599px) and (min-width: 500px){
+  .container-login{
+    max-width: 400px;
+  }
+  #login_div img{
+    margin: 20px 150px;
+  }
+}
+@media(max-width: 499px){
+  .container-login{
+    max-width: 300px;
+  }
+  #login_div img{
+    margin: 20px 100px;
+  }
+}
+
+/*Home Page*/
+#homepage-container{
+  visibility: hidden;
+}
+/*Navbar*/
+.h1, h1{
+  font-family: verdana;
+  font-weight: 700;
+  font-size: 30px;
+}
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+ul.topnav li {
+    float: left;
+    margin-top: 10px;
+}
+ul.topnav li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+}
+.active {
+    border-bottom: 1px solid #33C3F0;
+}
+ul.topnav li.right {
+    float: right;
+}
+#dispimages img{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+#welcome{
+    margin-top: 25px;
+}
+#image{
+    border: none;
+    outline: none;
+    width: 100px;
+    height: 100px;
+    display: none;
+}
+
+/*Sidebar*/
+.sidebar {
+  width: 250px;
+  background-color: white;
+  height: 150%;
+  overflow: auto;
+  float: left;
+}
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+.sidebar a.active {
+  background-color: #1EAEDB;
+  color: white;
+}
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+/*Display Posts*/
+.small, small{
+  font-size: 12px;
+}
+#post-list, #profile-list {
+   margin:0;
+   padding:0;
+   margin:10px auto;
+}
+#post-list h2, #profile-list h2 {
+   padding:10px;
+   margin:0;
+   color:white;
+}
+#post-list li, #profile-list li {
+    padding:10px;
+    cursor: pointer;
+    list-style: none ;
+    border: 1px solid #999;
+    margin: 20px;
+    background-color: white;
+}
+#post_author{
+    font-style: italic;
+    color: gray;
+    background-color: none;
+    font-size: 15px !important;
+    float: right;
+    font-weight: lighter;
+}
+#post_title{
+    color: #1EAEDB;
+    font-size: 20px;
+    padding-top: 10px;
+    font-weight: bold;
+}
+#post_content{
+  padding: 5px 0px;
+}
+#post-list li:hover, #profile-list li:hover {
+  background: #e5f7ff;
+}
+#post-list li span{
+    font-size: 25px;
+}
+#edit-post-module, #comment-post-module, #like-post-module{
+  display: none;
+  float: right;
+  padding: 20px;
+  margin-right: 20px;
+}
+#comments{
+  color: dodgerblue;
+  font-size: 14px;
+}
+#num_likes{
+  float: right;
+}
+/* Add Post Button */
+#add-post-module #open-add-post-form-btn {
+    font-size: 1.5em;
+    border-radius: 50%;
+    padding: 2px 8px;
+    margin: 20px;
+}
+#compose{
+  text-align: right;
+  margin-right: 20px; 
+}
+
+button{
+  padding: 10px 30px;
+  margin: 10px 50px;
+  border: none;
+  outline: none;
+  background-color: #33C3F0;
+  border: 2px solid #33C3F0;
+  color: #fff;
+  cursor: pointer;
+  font-size: 17px;
+}
+button:hover {
+    background-color: #1EAEDB;
+    border-color: #1EAEDB;
+    color: white;
+}
+button a{
+    text-decoration: none;
+    color: white;
+}
+#createPost{
+    color: #33C3F0;
+    margin: auto;
+    text-align: center;
+    margin-top: 10px;
+}
+input[type="text"] {
+    outline: none;
+    border: 2px solid lightgray;
+    box-sizing: border-box;
+    font-size: 15px;
+    padding: 10px;
+    width: 100%;
+}
+input[type="text"]:focus{
+  outline:none;
+  border: 2px solid #33C3F0;
+}
+textarea {
+  outline: none;
+  border: 2px solid lightgray;
+  box-sizing: border-box;
+  font-size: 15px;
+  padding: 10px;
+  font-family: verdana;
+  width: 100%;
+}
+textarea:focus{
+  outline:none;
+  border: 2px solid #33C3F0;
+}
+
+h2{
+    text-align: center;
+}
+
+/*Add Post Page*/
+#add-post-module form {
+    max-width: 650px;
+}
+
+#add-post-btn img{
+    width: 23px;
+    height: 29px;
+}
+#add-post-btn{
+    padding: 0px;
+    margin-left: 0px;
+    width: 80px;
+}
+#post_status{
+    text-align: center;
+}
+
+/*Profile Page*/
+.card{
+  margin: 40px auto;
+}
+.home-card{
+   display: block;
+}
+.main-card{
+  background-color: transparent;
+  border: none;
+}
+#profile-email{
+    margin-bottom: 5px;
+    color: #33C3F0;
+}
+#profile-head{
+    margin: 0px 0px 20px 0px;
+    text-align: center;
+}
+.profile-container{
+    background-color: #E9EAED;
+}   
+input[type=file]{
+  font-size: 15px;
+  margin: 10px 0px;
+}
+input[type=file]::-webkit-file-upload-button {
+  padding: 10px;
+  border-radius: .2em;
+  background-color: white;
+  outline: none;
+  border: 2px solid #33C3F0;
+  color: #33C3F0;
+}
+input[type=file]::-webkit-file-upload-button:hover {
+  background-color: #33C3F0;
+  border: 2px solid #33C3F0;
+  color: white
+}
+.upload-btn{
+    margin: 10px 0px;
+}
+@media screen and (max-width: 900px) {
+  .sidebar {
+    display: none;
+  }
+}

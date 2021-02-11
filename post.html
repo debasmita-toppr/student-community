@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create Post</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="post-container">
+  <div>
+        <ul class="topnav">
+            <li><div id="dispimages" class="dispimages"><img src="images/person2.png"></div></li>
+            <li><a href="home.html"><h1>Social Website</h1><p id="welcome"></p></a></li>
+            <li class="right"><button onclick="logout();">Logout</button></li>
+            <li class="right" id="profile-text"><a href="profile.html">My Profile</a></li>
+            <li class="right active" id="profile-text"><a href="post.html">Post</a></li>
+            <li class="right" id="profile-text"><a href="home.html">Home</a></li>
+        </ul> 
+    </div>
+    <div class="sidebar">
+        <a href="home.html">Home</a>
+        <a href="profile.html">Profile</a>
+        <a class="active" href="post.html">Post</a>
+        <a onclick="logout();">Logout</a>
+    </div>
+	<!-- add user module -->
+    <section id="add-post-module" >
+        <form class="card border-secondary pt-2 pl-4 pr-4">
+            <h2 class="card-title">Add Post</h2>
+           <br>
+            <input type='text' data-key='post_title' class='post-input' placeholder="Post Title"><br>
+            <br>
+            <textarea type='text' data-key='post_content' class='post-input' placeholder="Post Content"></textarea> <br>
+            <button type='button' id="add-post-btn" class="btn btn-info pt-2 pb-2"><img src="images/write.png">Post</button>
+            <p id="post_status"></p>
+        </form>
+    </section>
+<script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-storage.js"></script>
+<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="createPost.js"></script>
+<script type="text/javascript" src="profilePage.js"></script>
+</body>
+</html>

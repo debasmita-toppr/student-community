@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profile</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="profile-container" onload="viewYourPosts()">
+	<div>
+        <ul class="topnav">
+            <li><div id="dispimages" class="dispimages"><img src="images/person2.png"></div></li>
+            <li><a href="home.html"><h1>Social Website</h1><p id="welcome"></p></a></li>
+            <li class="right"><button onclick="logout();">Logout</button></li>
+            <li class="right active" id="profile-text"><a href="profile.html">My Profile</a></li>
+            <li class="right" id="profile-text"><a href="post.html">Post</a></li>
+            <li class="right" id="profile-text"><a href="home.html">Home</a></li>
+        </ul> 
+    </div>
+    <div class="sidebar">
+        <a href="home.html">Home</a>
+        <a class="active" href="profile.html">Profile</a>
+        <a href="post.html">Post</a>
+        <a href="index.html">Logout</a>
+    </div>
+    <div>
+    <div class="card" style="max-width: 25rem; text-align: center;" >
+        <h3 class="tab">My posts</h3>
+	</div>
+    <div style="text-align: center; margin: 20px auto;">
+        
+	<ul id="profile-list" style="max-width: 40rem;" class="card main-card"></ul>
+</div>
+</div>
+	
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-storage.js"></script>
+<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="profilePage.js"></script>
+</body>
+</html>
